@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fastapi-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: fastapi-api
+  template:
+    metadata:
+      labels:
+        app: fastapi-api
+    spec:
+      containers:
+      - name: api
+        image: bitnami/python:3.12 # Пока используем готовый, чтобы проверить связь
+        ports:
+        - containerPort: 8000
