@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: api
-        image: bitnami/python:3.12-slim
+        image: python:3.12-slim
         ports:
         - containerPort: 8000
